@@ -1,0 +1,127 @@
+package com.example.myapplication8;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
+import android.app.AlertDialog.Builder;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.database.Cursor;
+
+import android.os.Bundle;
+import android.database.sqlite.SQLiteDatabase;
+public class MainActivity<view> extends AppCompatActivity implements android.view.View.OnClickListener {
+    EditText ID, Name, Marks;
+    Button Insert, Delete, Update, View, ViewAll;
+    SQLiteDatabase db;
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ID = findViewById(R.id.editTextNumber);
+        Name = findViewById(R.id.editTextTextPersonName2);
+        Marks = findViewById(R.id.editTextNumber2);
+        Insert = findViewById(R.id.button);
+        Delete = findViewById(R.id.button2);
+        Update = findViewById(R.id.button3);
+        View = findViewById(R.id.button4);
+        ViewAll = findViewById(R.id.button5);
+        Insert.setOnClickListener(this);
+        Delete.setOnClickListener(this);
+        Update.setOnClickListener(this);
+        View.setOnClickListener(this);
+        ViewAll.setOnClickListener(this);
+
+        db = openOrCreateDatabase("Student", Context.MODE_PRIVATE, null);
+        db.execSQL("Create table if not exists student(ID varchar, name varchar, marks varchar);");
+    }
+
+    @Override
+    public void onClick(android.view.View view) {
+        if (view == Insert) {
+            if (ID.getText().toString().trim().length() == 0 ||
+                    Name.getText().toString().trim().length() == 0 ||
+                    Marks.getText().toString().trim().length() == 0) {
+                showMessage("Error", "Enter all values");
+                return;
+            }
+            db.execSQL("INsert into student values ('" + ID.getText() + "','" + Name.getText() + "','" + Marks.getText() + "');");
+            showMessage("Success", "Record added");
+             clearText();
+        }
+        if (view == Delete) {
+            if (ID.getText().toString().trim().length() == 0) {
+                showMessage("Error", "Enter all values");
+                return;
+
+            }
+            Cursor c = db.rawQuery("SELECT * from student where ID='" + ID.getText() + "'", null);
+            if (c.moveToFirst()) {
+                db.execSQL("delete from student where ID='" + ID.getText() + "'");
+            }
+            showMessage("Success", "Record deleted");
+
+            clearText();
+
+        }
+        if (view == Update) {
+            if(ID.getText().toString().trim().length()==0){
+                showMessage("error", "Enter ID");
+                return;
+            }
+            Cursor c = db.rawQuery("SELECT * from student where ID='" + ID.getText() + "'", null);
+            if (c.moveToFirst()) {
+                db.execSQL("Update student SET name='" + Name.getText()+"'.marks'" +Marks.getText()+"'WHERE ID='"+ID.getText()+"'");
+                showMessage("Success", "Record updated");
+            }
+            else {
+                showMessage("Error", "WrongId");
+            }
+            clearText();
+        }
+        if (view == View) {
+            Cursor c = db.rawQuery("SELECT * from student where ID='" + ID.getText() + "'", null);
+            if (c.moveToFirst()) {
+                Name.setText(c.getString(1));
+                Marks.setText(c.getString(2));
+            }
+            else{
+                showMessage("error","wrong number");
+                clearText();
+            }
+        }
+        if (view == ViewAll) {
+            Cursor c = db.rawQuery("SELECT * from student", null);
+            if (c.getCount()==0) {
+                showMessage("error", "No records");
+                return;
+            }
+               StringBuffer buffer=new StringBuffer();
+               while(c.moveToNext()){
+                   buffer.append("ID: "+ c.getString(0) + "\n");
+                   buffer.append("name: "+ c.getString(1) + "\n");
+                   buffer.append("marks "+ c.getString(2) + "\n");
+               }
+               showMessage("Student ", buffer.toString());
+            }
+        }
+
+
+
+
+    private void showMessage(String title, String message) {
+        Builder builder=new Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.show();
+    }
+
+    private void clearText() {
+        ID.setText("");
+        Name.setText("");
+        Marks.setText("");
+    }
+
+}
