@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DanActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:text="Sat"
+                     />
+
+                <TextView
+                    android:text="Predmet"
+                    />
+
+                <TextView
+                    android:text="Vrijeme"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:text="1."
+                    />
+
+                <EditText
+                    android:id="@+id/predmet1"
+                    android:text=""
+                   />
+
+                <TextView
+                    android:text="8:00-8:45"
+                  />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:text="2."
+                   />
+
+                <EditText
+                    android:id="@+id/predmet2"
+                    android:text=""
+                 />
+
+                <TextView
+                    android:text="8:50-9:35"
+                  />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:text="3."
+                   />
+
+                <EditText
+                    android:id="@+id/predmet3"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:text="9:40-10:25"
+                   />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:text="4."
+                   />
+
+                <EditText
+                    android:id="@+id/predmet4"
+                    android:text=""
+                   />
+
+                <TextView
+                    android:text="10:45-11:30"
+                   />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:text="5."
+               />
+
+                <EditText
+                    android:id="@+id/predmet5"
+                    android:text=""
+                    />
+
+                <TextView
+                    android:text="11:35-12:20"
+                 />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:text="6."
+                 />
+
+                <EditText
+                    android:id="@+id/predmet6"
+                    android:text=""
+               />
+
+                <TextView
+                    android:text="12:25-13:10"
+             />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:text="7."
+              />
+
+                <EditText
+                    android:id="@+id/predmet7"
+                    android:text=""
+             />
+
+                <TextView
+                    android:text="13:15-14:00"
+               />
+
+            </TableRow>
+
+
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="32dp"
+                android:text="Spremi" />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poništi" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>
