@@ -1,0 +1,44 @@
+package com.example.myapplication10;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+
+public class DanActivity extends AppCompatActivity {
+    private Day current;
+    private TextView[] predmet;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_dan);
+        current=Appdata.dan[Appdata.lastclickedId];
+        predmet= new TextView[7];
+        predmet[0]=findViewById(R.id.predmet1);
+        predmet[1]=findViewById(R.id.predmet2);
+        predmet[2]=findViewById(R.id.predmet3);
+        predmet[3]=findViewById(R.id.predmet4);
+        predmet[4]=findViewById(R.id.predmet5);
+        predmet[5]=findViewById(R.id.predmet6);
+        predmet[6]=findViewById(R.id.predmet7);
+
+        for (int i=0; i< predmet.length;i++)
+            predmet[i].setText(current.getPredmet(i+1));
+
+        Button btnBack=findViewById(R.id.back);
+        btnBack.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                DanActivity.this.finish();
+            }
+        });
+    }
+
+
+
+
+}
