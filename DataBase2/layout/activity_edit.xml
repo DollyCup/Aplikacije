@@ -1,0 +1,103 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+
+            android:layout_weight="3"/>
+
+        <Button
+            android:id="@+id/pon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pon"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+
+            android:layout_weight="10"/>
+
+        <Button
+            android:id="@+id/uto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="uto"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+
+            android:layout_weight="10"/>
+        <Button
+            android:id="@+id/sri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sri"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+
+            android:layout_weight="10"/>
+        <Button
+            android:id="@+id/cet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Čet"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+
+            android:layout_weight="10"/>
+        <Button
+            android:id="@+id/pet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pet"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+
+            android:layout_weight="10"/>
+        <Button
+            android:id="@+id/sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sub"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+
+            android:layout_weight="10"/>
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nazad" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+
+            android:layout_weight="3"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
