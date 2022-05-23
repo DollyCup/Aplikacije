@@ -15,103 +15,87 @@
         <View
             android:layout_width="1dp"
             android:layout_height="0dp"
-
+            android:minHeight="@dimen/space_min_height"
             android:layout_weight="3"/>
 
         <Button
             android:id="@+id/pon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="pon" />
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_height"
+            android:text="pon"/>
 
         <View
             android:layout_width="1dp"
             android:layout_height="0dp"
-
+            android:minHeight="@dimen/space_min_height"
             android:layout_weight="10"/>
 
         <Button
             android:id="@+id/uto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="uto" />
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_height"
+            android:text="uto"/>
 
         <View
             android:layout_width="1dp"
             android:layout_height="0dp"
-
+            android:minHeight="@dimen/space_min_height"
             android:layout_weight="10"/>
-
         <Button
             android:id="@+id/sri"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="sri" />
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_height"
+            android:text="sri"/>
 
         <View
             android:layout_width="1dp"
             android:layout_height="0dp"
-
+            android:minHeight="@dimen/space_min_height"
             android:layout_weight="10"/>
-
         <Button
             android:id="@+id/cet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Čet" />
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_height"
+            android:text="Čet"/>
 
         <View
             android:layout_width="1dp"
             android:layout_height="0dp"
-
+            android:minHeight="@dimen/space_min_height"
             android:layout_weight="10"/>
-
         <Button
             android:id="@+id/pet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="pet" />
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_height"
+            android:text="pet"/>
 
         <View
             android:layout_width="1dp"
             android:layout_height="0dp"
-
+            android:minHeight="@dimen/space_min_height"
             android:layout_weight="10"/>
-
         <Button
             android:id="@+id/sub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="sub" />
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_height"
+            android:text="sub"/>
 
         <View
             android:layout_width="1dp"
             android:layout_height="0dp"
-
-            android:layout_weight="10"/>
-
-        <Button
-            android:id="@+id/btn_edit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Promjeni" />
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="0dp"
-
+            android:minHeight="@dimen/space_min_height"
             android:layout_weight="10"/>
 
         <Button
             android:id="@+id/exit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/btn_height"
             android:text="Izlaz" />
 
         <View
             android:layout_width="1dp"
             android:layout_height="0dp"
-
+            android:minHeight="@dimen/space_min_height"
             android:layout_weight="3"/>
 
 
