@@ -1,0 +1,38 @@
+import androidx.appcompat.app.AppCompatActivity; 
+
+import android.os.Bundle; 
+import android.view.View; 
+import android.widget.ImageButton; i
+import android.widget.TextView; 
+public class domace extends AppCompatActivity { 
+
+ImageButton ib_konj, ib_mac; 
+TextView tv_1; 
+
+ 
+@Override 
+protected void onCreate(Bundle savedInstanceState) { 
+super.onCreate(savedInstanceState); 
+setContentView(R.layout.activity_domace); 
+ 
+ib_konj = findViewById(R.id.imageButton); 
+ib_mac = findViewById(R.id.imageButton2); 
+tv_1 = findViewById(R.id.textView); 
+ 
+ib_konj.setOnClickListener(new View.OnClickListener() { 
+@Override 
+public void onClick(View v) { 
+tv_1.setText("KONJ"); 
+} 
+}); 
+
+ib_mac.setOnClickListener(new View.OnClickListener() { 
+@Override 
+public void onClick(View v) { 
+ 
+tv_1.setText("MACKA"); 
+ 
+} 
+}); 
+} 
+}
