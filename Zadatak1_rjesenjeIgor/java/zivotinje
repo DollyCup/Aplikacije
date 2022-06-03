@@ -1,0 +1,31 @@
+import androidx.appcompat.app.AppCompatActivity;  
+import android.os.Bundle; 
+import android.view.View; 
+import android.widget.ImageButton; 
+import android.widget.TextView;  
+public class MainActivity extends AppCompatActivity {     
+ImageButton ib_lav, ib_zebra;     TextView tv_1;      
+@Override     
+protected void onCreate(Bundle savedInstanceState) {         
+super.onCreate(savedInstanceState);         
+setContentView(R.layout.activity_main);          
+ib_lav = findViewById(R.id.imageButton);         
+ib_zebra = findViewById(R.id.imageButton2);         
+tv_1 = findViewById(R.id.textView);          
+ib_lav.setOnClickListener(new View.OnClickListener() {            
+@Override             
+  public void onClick(View v) {                   
+  tv_1.setText("LAV"+ "\n" + " Petar");
+            }
+        });
+
+        ib_zebra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                tv_1.setText("ZEBRA Saklas");
+
+            }
+        });
+    }
+}
