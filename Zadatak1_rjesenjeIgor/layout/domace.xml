@@ -1,0 +1,9 @@
+21.	<?xml version="1.0" encoding="utf-8"?> 
+22.	<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+23.	xmlns:app="http://schemas.android.com/apk/res-auto" 
+24.	xmlns:tools="http://schemas.android.com/tools" 
+25.	android:layout_width="match_parent" 
+26.	android:layout_height="match_parent" 
+27.	tools:context=".MainActivity"> 
+28.	 
+29.	</androidx.constraintlayout.widget.ConstraintLayout> 
