@@ -1,0 +1,12 @@
+34.	<menu xmlns:android="http://schemas.android.com/apk/res/android"> 
+35.	<item 
+36.	android:id="@+id/icon1" 
+37.	android:icon="@drawable/savanapanorama" 
+38.	android:title="SAVANA"/> 
+39.	 
+40.	<item 
+41.	android:id="@+id/icon2" 
+42.	android:icon="@drawable/domacepanorama" 
+43.	android:title="DOMACE" /> 
+44.	 
+45.	</menu> 
